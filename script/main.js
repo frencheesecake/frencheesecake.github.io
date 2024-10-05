@@ -1,3 +1,15 @@
+// Copy to clipboard button
+function copyText() {
+    let myEmail = document.getElementById("myEmail");
+    const ogText = myEmail.innerHTML;
+
+    navigator.clipboard.writeText(myEmail.value);
+    myEmail.innerHTML = "Copied to clipboard!";
+
+    setTimeout(() => myEmail.innerHTML = ogText, 3000);
+}
+
+
 // Create timeline
 const tl = gsap.timeline();
 

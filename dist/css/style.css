@@ -58,12 +58,13 @@ p {
 }
 
 nav ul {
-  padding: 50px 0;
+  padding-top: 50px;
   max-width: 1152px;
   margin: auto;
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  align-items: center;
 }
 nav ul .push {
   margin-left: auto;
@@ -72,9 +73,22 @@ nav ul a {
   padding: 10px 15px;
   border: 1px solid white;
   border-radius: 15px;
-  transition: 0.1s all ease;
+  transition: all 0.1s ease;
 }
 nav ul a:hover {
+  background-color: white;
+  color: black;
+}
+nav ul button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  border-radius: 15px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+nav ul button:hover {
   background-color: white;
   color: black;
 }
