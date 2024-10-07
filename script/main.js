@@ -6,7 +6,12 @@ function copyText() {
     navigator.clipboard.writeText(myEmail.value);
     myEmail.innerHTML = "Copied to clipboard!";
 
-    setTimeout(() => myEmail.innerHTML = ogText, 3000);
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            // reset text if user leaves tab/window
+            myEmail.innerHTML = ogText;
+        }
+    });
 }
 
 
@@ -32,7 +37,7 @@ stagger: 0.05,
 duration: 1
 });
 
-// ⭐Text and Image gallery reveal animation⭐
+// ⭐Element reveal animation⭐
 const gridChildren = document.querySelectorAll('.grid > div');
 
 tl.from(gridChildren, {
